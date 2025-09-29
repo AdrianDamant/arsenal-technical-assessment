@@ -10,5 +10,6 @@ namespace ArsenalTechnicalAssignment.Data.Data
         Task<string> UpdatePlayerAsync(Guid playerId, string playerName, Position position, int jerseyNumber, int goalsScored);
         Task<string> DeletePlayerAsync(Guid playerId);
         Task<Player?> GetPlayerAsync(Guid playerId);
+        Task<Player?> GetPlayersByJerseyNumberAsync(int jerseyNumber);
     }
 }

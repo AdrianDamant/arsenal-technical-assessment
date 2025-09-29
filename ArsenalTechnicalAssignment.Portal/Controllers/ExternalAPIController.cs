@@ -1,12 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ArsenalTechnicalAssignment.Data.Data;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ArsenalTechnicalAssignment.Portal.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class ExternalAPIController : Controller
     {
-        public IActionResult Index()
+        private ISQLSyncService _sqlSyncService;
+
+        public ExternalAPIController(ISQLSyncService sqlSyncService)
         {
-            return View();
+            _sqlSyncService = sqlSyncService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetPlayersAsync()
+        {
+            var result = await _sqlSyncService.GetPlayersAsync();
+            return Json(result);
         }
     }
 }

@@ -17,6 +17,11 @@ namespace ArsenalTechnicalAssignment.Portal.Controllers
             _sqlSyncService = sqlSyncService;
         }
 
+        public IActionResult ErrorStartup()
+        {
+            return View();
+        }
+
         public async Task<IActionResult> Index()
         {
             var model = new PlayersTableModel() { Players = await _sqlSyncService.GetPlayersAsync() };
@@ -34,7 +39,19 @@ namespace ArsenalTechnicalAssignment.Portal.Controllers
         public async Task<IActionResult> CreateUpdatePlayer(CreatePlayerModel model)
         {
             var player = await _sqlSyncService.GetPlayerAsync(model.PlayerId);
-            if (player is null) await _sqlSyncService.CreatePlayerAsync(model.PlayerName, model.Position, model.JerseyNumber, model.GoalsScored);
+            if (player is null)
+            {
+                //Make sure the player jersey number is unique!
+                var jerseyNumber = await _sqlSyncService.GetPlayersByJerseyNumberAsync(model.JerseyNumber);
+                if(jerseyNumber is null)
+                {
+                    await _sqlSyncService.CreatePlayerAsync(model.PlayerName, model.Position, model.JerseyNumber, model.GoalsScored);
+                }
+                else
+                {
+                    //TODO: Return an Error, jersey number is not unique
+                }
+            }
             else await _sqlSyncService.UpdatePlayerAsync(model.PlayerId, model.PlayerName, model.Position, model.JerseyNumber, model.GoalsScored);
             return RedirectToAction("Index", "Home");
         }
@@ -51,6 +68,12 @@ namespace ArsenalTechnicalAssignment.Portal.Controllers
             var model = await _sqlSyncService.GetPlayerAsync(id);
             if (model is null) return View();//TODO return a neat error message
             return PartialView("_DeletePlayerModal", model.ToCreatePlayerModel());
+        }
+
+        public async Task<IActionResult> DeletePlayer(CreatePlayerModel model)
+        {
+            var deleteResult = await _sqlSyncService.DeletePlayerAsync(model.PlayerId);
+            return RedirectToAction("Index", "Home");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -34,6 +34,9 @@ namespace ArsenalTechnicalAssignment.Data.Data
         }
 
         public async Task<List<Player>> GetPlayersAsync() => await _sqlContext.Players.Where(__ => !__.Deleted).AsNoTracking().OrderBy(__ => __.PlayerName).ToListAsync();
+
+        public async Task<Player?> GetPlayersByJerseyNumberAsync(int jerseyNumber) => await _sqlContext.Players.Where(__ => !__.Deleted && __.JerseyNumber==jerseyNumber).AsNoTracking().OrderBy(__ => __.PlayerName).FirstOrDefaultAsync();
+
         public async Task<Player?> GetPlayerAsync(Guid playerId) => await _sqlContext.Players.FindAsync(playerId);
 
         public async Task<string> UpdatePlayerAsync(Guid playerId, string playerName, Position position, int jerseyNumber, int goalsScored)
