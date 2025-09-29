@@ -1,0 +1,62 @@
+﻿@using ArsenalTechnicalAssignment.Data.Dtos
+@model MatchesDto
+@{
+    ViewData["Title"] = "Matches Page";
+}
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- DataTables CSS -->
+<link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+
+<div class="text-center">
+    <h1 class="display-4">Arsenal Fixtures 2025 Season</h1>
+
+
+    <main id="main" class="d-flex flex-column" style="height:90vh">
+        <section class="card" data-aos="fade-up">
+            <div class="m-2" style="height: 80vh;">
+                <div class="card shadow-sm h-100" data-aos="fade-up">
+                    <div class="card-header d-flex justify-content-end align-items-center bg-danger text-white">
+                    </div>
+                    <div class="card-body pe-3 ps-3 pb-3 pt-0 custom-scrollbar" style="height: 250px; overflow-y: auto;">
+                        <table class="table table-hover">
+                            <thead class="table-light sticky-top " style="z-index:999">
+                                <tr>
+                                    @{
+                                        <th></th>
+                                        <th>Home Team</th>
+                                        <th>Away Team</th>
+                                        <th>Match Date</th>
+                                        <th>Stage</th>
+                                        <th>LastUpdated</th>
+                                    }
+                                </tr>
+                            </thead>
+                            <tbody id="machineTable">
+                                @foreach (var item in Model.Matches)
+                                {
+                                    <tr style="cursor: pointer;">
+                                        <td><i class="bi bi-circle-fill" style="color:green; font-size:25px"></i></td>
+                                        <td>
+                                            <img src="@item.HomeTeam.Crest" style="max-height:100px;" />
+                                        </td>
+                                        <td>
+                                            <img src="@item.AwayTeam.Crest" style="max-height:100px;" />
+                                        </td>
+                                        <td>@item.UtcDate</td>
+                                        <td>@item.Stage</td>
+                                        <td>@item.LastUpdated.ToString("dd-MM-yyyy")</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br />
+    </main>
+</div>

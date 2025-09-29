@@ -1,0 +1,78 @@
+﻿@model CreatePlayerModel
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="modal fade" id="Create-Player-Modal" tabindex="-1" aria-labelledby="Create-Variant-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header ">
+                <a class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</a>
+            </div>
+
+            <style>
+                form fieldset {
+                    border: 1px solid #dee2e6;
+                    padding: 20px;
+                    border-radius: 10px;
+                    background-color: #ffffff;
+                }
+            </style>
+
+            <div class="modal-body" style="background:#00000014">
+                <form id="" enctype="multipart/form-data" asp-controller="Home" asp-action="CreateUpdatePlayer">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="container py-4">
+                        <!-- General Information -->
+                        <div class="mb-4">
+                            <h4 class="fw-bold">General Information</h4>
+                            <fieldset class="shadow-sm mb-4">
+                                <div>
+                                    <input asp-for="PlayerId" type="text" class="form-control border-2" hidden="hidden">
+                                    <span asp-validation-for="PlayerId" class="text-danger" hidden="hidden"></span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-2">
+                                        <span class="fw-bold">Player Name</span>
+                                        <input asp-for="PlayerName" type="text" class="form-control border-2">
+                                        <span asp-validation-for="PlayerName" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="col-md-6 mb-2">
+                                        <span asp-validation-for="Position" class="fw-bold">Current Site</span>
+                                        <select asp-for="Position" class="form-select border-2">
+                                            <option hidden value="">Select a Position</option>
+                                            @foreach (var position in Model.Positions)
+                                            {
+                                                <option value="@position">@position</option>
+                                            }
+                                        </select>
+                                        <span asp-validation-for="Position" class="text-danger"></span>
+                                    </div>
+                                </div>
+                              <div class="row">
+                                    <div class="col-md-6 mb-2">
+                                        <span class="fw-bold">Jersey Number</span>
+                                        <input asp-for="JerseyNumber" type="text" class="form-control border-2" id="Description">
+                                        <span asp-validation-for="JerseyNumber" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-md-6 mb-2">
+                                        <span class="fw-bold">Goals Scored</span>
+                                        <input asp-for="GoalsScored" type="text" class="form-control border-2" id="description">
+                                        <span asp-validation-for="GoalsScored" class="text-danger"></span>
+                                    </div>
+                              </div>
+                            </fieldset>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="text-center d-flex align-items-end justify-content-end">
+                            <button type="submit" class="btn btn-success px-4 py-2">Save</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
