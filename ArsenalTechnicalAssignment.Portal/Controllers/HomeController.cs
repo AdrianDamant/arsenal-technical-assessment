@@ -22,19 +22,16 @@ namespace ArsenalTechnicalAssignment.Portal.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(bool? filterByGoalsScored = false)
         {
-            var model = new PlayersTableModel() { Players = await _sqlSyncService.GetPlayersAsync() };
+            var players = await _sqlSyncService.GetPlayersAsync();
+            if (filterByGoalsScored == true) players = players.OrderByDescending(__ => __.GoalsScored).ToList();
+            var model = new PlayersTableModel() { Players = players };
             return View(model);
         }
 
-        public async Task<IActionResult> FilterbyGoalsScored()
-        {
-            var played = await _sqlSyncService.GetPlayersAsync();
-            played = played.OrderByDescending(__ => __.GoalsScored).ToList();
-            var model = new PlayersTableModel() { Players = played };
-            return View(model);
-        }
+        public IActionResult FilterbyGoalsScored() => RedirectToAction("Index", "Home", new { filterByGoalsScored = true});
+        
 
         public async Task<IActionResult> CreateUpdatePlayer(CreatePlayerModel model)
         {
