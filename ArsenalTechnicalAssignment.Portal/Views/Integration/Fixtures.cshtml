@@ -36,20 +36,22 @@
                                 </tr>
                             </thead>
                             <tbody id="machineTable">
-                                @foreach (var item in Model.Matches)
-                                {
-                                    <tr style="cursor: pointer;">
-                                        <td><i class="bi bi-circle-fill" style="color:green; font-size:25px"></i></td>
-                                        <td>
-                                            <img src="@item.HomeTeam.Crest" style="max-height:100px;" />
-                                        </td>
-                                        <td>
-                                            <img src="@item.AwayTeam.Crest" style="max-height:100px;" />
-                                        </td>
-                                        <td>@item.UtcDate</td>
-                                        <td>@item.Stage</td>
-                                        <td>@item.LastUpdated.ToString("dd-MM-yyyy")</td>
-                                    </tr>
+                                @if (Model is not null && Model.Matches is not null){
+                                    @foreach (var item in Model.Matches)
+                                    {
+                                        <tr style="cursor: pointer;">
+                                            <td><i class="bi bi-circle-fill" style="color:green; font-size:25px"></i></td>
+                                            <td>
+                                                <img src="@(@item.HomeTeam is null ? "" : @item.HomeTeam.Crest)" style="max-height:100px;" />
+                                            </td>
+                                            <td>
+                                                <img src="@(@item.AwayTeam is null ? "" : @item.AwayTeam.Crest)" style="max-height:100px;" />
+                                            </td>
+                                            <td>@item.UtcDate</td>
+                                            <td>@item.Stage</td>
+                                            <td>@item.LastUpdated.ToString("dd-MM-yyyy")</td>
+                                        </tr>
+                                    }
                                 }
                             </tbody>
                         </table>
