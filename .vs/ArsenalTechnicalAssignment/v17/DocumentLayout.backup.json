@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "ArsenalTechnicalAssignment.Portal\\Views\\Integration\\Results.cshtml",
               "ToolTip": "C:\\Users\\adria\\Documents\\GitHub\\arsenal-technical-assessment\\ArsenalTechnicalAssignment.Portal\\Views\\Integration\\Results.cshtml",
               "RelativeToolTip": "ArsenalTechnicalAssignment.Portal\\Views\\Integration\\Results.cshtml",
-              "ViewState": "AgIAACwAAAAAAAAAAAAcwDUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAswDoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-29T15:44:31.694Z",
               "EditorCaption": ""
@@ -71,8 +71,7 @@
               "RelativeToolTip": "ArsenalTechnicalAssignment.Portal\\Views\\Integration\\Fixtures.cshtml",
               "ViewState": "AgIAAB0AAAAAAAAAAAAcwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-29T15:42:42.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T15:42:42.148Z"
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "ArsenalTechnicalAssignment.Portal\\Models\\PlayersTableModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T15:42:30.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T15:42:30.455Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "ArsenalTechnicalAssignment.Data\\Data\\ISQLSyncService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T15:36:52.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T15:36:52.997Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "ArsenalTechnicalAssignment.Data\\Data\\SQLSyncService.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAwwCEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T15:35:01.082Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T15:35:01.082Z"
             },
             {
               "$type": "Document",
@@ -123,8 +119,7 @@
               "RelativeToolTip": "ArsenalTechnicalAssignment.Portal\\Views\\Shared\\_DeletePlayerModal.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-29T15:32:11.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T15:32:11.308Z"
             },
             {
               "$type": "Document",
@@ -136,8 +131,7 @@
               "RelativeToolTip": "ArsenalTechnicalAssignment.Portal\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAE4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-29T15:32:05.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T15:32:05.817Z"
             },
             {
               "$type": "Document",
@@ -149,8 +143,7 @@
               "RelativeToolTip": "ArsenalTechnicalAssignment.Portal\\Controllers\\HomeController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAmwDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T15:31:56.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T15:31:56.341Z"
             }
           ]
         }
