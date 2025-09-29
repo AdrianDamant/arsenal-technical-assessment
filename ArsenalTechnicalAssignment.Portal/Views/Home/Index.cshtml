@@ -44,23 +44,26 @@
                                 </tr>
                             </thead>
                             <tbody id="machineTable">
-                                @foreach (var item in Model.Players)
+                                @if(Model is not null && Model.Players is not null)
                                 {
-                                    <tr style="cursor: pointer;">
-                                        <td><i class="bi bi-circle-fill" style="color:green; font-size:25px"></i></td>
-                                        <td>@item.PlayerName</td>
-                                        <td>@item.Position</td>
-                                        <td>@item.JerseyNumber</td>
-                                        <td>@item.GoalsScored</td>
-                                        <td>@item.DateCreated.ToString("dd-MM-yyyy")</td>
-                                        <td>@item.DateModified.ToString("dd-MM-yyyy")</td>
-                                        <td class="text-center delete-cell">
-                                            <button class="editPlayer btn bi bi-pencil-fill edit-icon" data-id="@item.PlayerId"></button>
-                                        </td>
-                                        <td class="text-center delete-cell">
-                                            <button class="deletePlayer btn bi bi-trash-fill delete-icon" data-id="@item.PlayerId"></button>
-                                        </td>
-                                    </tr>
+                                    @foreach (var item in Model.Players)
+                                    {
+                                        <tr style="cursor: pointer;">
+                                            <td><i class="bi bi-circle-fill" style="color:green; font-size:25px"></i></td>
+                                            <td>@item.PlayerName</td>
+                                            <td>@item.Position</td>
+                                            <td>@item.JerseyNumber</td>
+                                            <td>@item.GoalsScored</td>
+                                            <td>@item.DateCreated.ToString("dd-MM-yyyy")</td>
+                                            <td>@item.DateModified.ToString("dd-MM-yyyy")</td>
+                                            <td class="text-center delete-cell">
+                                                <button class="editPlayer btn bi bi-pencil-fill edit-icon" data-id="@item.PlayerId"></button>
+                                            </td>
+                                            <td class="text-center delete-cell">
+                                                <button class="deletePlayer btn bi bi-trash-fill delete-icon" data-id="@item.PlayerId"></button>
+                                            </td>
+                                        </tr>
+                                    }
                                 }
                             </tbody>
                         </table>

@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "ArsenalTechnicalAssignment.Portal\\Views\\Integration\\Results.cshtml",
               "ToolTip": "C:\\Users\\adria\\Documents\\GitHub\\arsenal-technical-assessment\\ArsenalTechnicalAssignment.Portal\\Views\\Integration\\Results.cshtml",
               "RelativeToolTip": "ArsenalTechnicalAssignment.Portal\\Views\\Integration\\Results.cshtml",
-              "ViewState": "AgIAACsAAAAAAAAAAAAswDoAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAswEEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-29T15:44:31.694Z",
               "EditorCaption": ""
@@ -131,7 +131,8 @@
               "RelativeToolTip": "ArsenalTechnicalAssignment.Portal\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAE4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-29T15:32:05.817Z"
+              "WhenOpened": "2025-09-29T15:32:05.817Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
