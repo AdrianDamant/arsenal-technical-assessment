@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\adria\\Documents\\GitHub\\arsenal-technical-assessment\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{332D4DFA-CE03-4513-8D2E-55CA0840BD83}|ArsenalTechnicalAssignment.Portal\\ArsenalTechnicalAssignment.Portal.csproj|c:\\users\\adria\\documents\\github\\arsenal-technical-assessment\\arsenaltechnicalassignment.portal\\controllers\\externalapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332D4DFA-CE03-4513-8D2E-55CA0840BD83}|ArsenalTechnicalAssignment.Portal\\ArsenalTechnicalAssignment.Portal.csproj|solutionrelative:arsenaltechnicalassignment.portal\\controllers\\externalapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332D4DFA-CE03-4513-8D2E-55CA0840BD83}|ArsenalTechnicalAssignment.Portal\\ArsenalTechnicalAssignment.Portal.csproj|c:\\users\\adria\\documents\\github\\arsenal-technical-assessment\\arsenaltechnicalassignment.portal\\controllers\\integrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332D4DFA-CE03-4513-8D2E-55CA0840BD83}|ArsenalTechnicalAssignment.Portal\\ArsenalTechnicalAssignment.Portal.csproj|solutionrelative:arsenaltechnicalassignment.portal\\controllers\\integrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExternalAPIController.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Documents\\GitHub\\arsenal-technical-assessment\\ArsenalTechnicalAssignment.Portal\\Controllers\\ExternalAPIController.cs",
+              "RelativeDocumentMoniker": "ArsenalTechnicalAssignment.Portal\\Controllers\\ExternalAPIController.cs",
+              "ToolTip": "C:\\Users\\adria\\Documents\\GitHub\\arsenal-technical-assessment\\ArsenalTechnicalAssignment.Portal\\Controllers\\ExternalAPIController.cs",
+              "RelativeToolTip": "ArsenalTechnicalAssignment.Portal\\Controllers\\ExternalAPIController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T13:50:47.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IntegrationController.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Documents\\GitHub\\arsenal-technical-assessment\\ArsenalTechnicalAssignment.Portal\\Controllers\\IntegrationController.cs",
+              "RelativeDocumentMoniker": "ArsenalTechnicalAssignment.Portal\\Controllers\\IntegrationController.cs",
+              "ToolTip": "C:\\Users\\adria\\Documents\\GitHub\\arsenal-technical-assessment\\ArsenalTechnicalAssignment.Portal\\Controllers\\IntegrationController.cs",
+              "RelativeToolTip": "ArsenalTechnicalAssignment.Portal\\Controllers\\IntegrationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T13:50:23.461Z",
+              "EditorCaption": ""
             }
           ]
         }
